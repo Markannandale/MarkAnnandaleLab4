@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* Base typography */
+body {
+	font: 150%/1.4 Helvetica, Arial, sans-serif;
+}
+
+/* Header padding */
+header {
+	padding: 50px;
+}
+/* Escaping margin bug */
+h1 {
+	margin: 0;
+}
+
+/* Section, aside, and footer styles */
+section {
+	float: right;
+	width: 600px;
+	padding: 40px;
+}
+
+aside {
+	float: left;
+	width: 300px;
+}
+
+footer {
+	position: fixed;
+	background-color: gray;
+	opacity: 0.8;
+	bottom: 0;
+}
+
+/* Media query to arrange elements in a single column on smrtphone screens */
+@media only screen and (max-width: 768px) {
+	header{
+		width: 760px;
+	}
+	h1{
+		width: 760px;
+	}
+	section{
+		width: 760px;
+	}
+	aside{
+		width: 760px;
+	}
+}
